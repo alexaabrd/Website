@@ -14,46 +14,21 @@
 }            
 
 html {
- overflow-y: scroll;
 }   
     
 body {
  margin:0;
- font:1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
- background:#0d261a;
  width:100%;
  height:100%;
+ font:1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+ background:black  url(../images/main.png) no-repeat center center fixed;
+ background-size:cover;
  color:white;
 }   
 
-@media (min-width: 400px) {
-  body {
-   background:black  url(../images/main.png) no-repeat center center fixed;
-   background-size:110% 110%;
-  }
-}
-
-
 .content {
- color:white;
  width:100%;
  padding-top: 30px;
- clear:both;
-}
-
-h1 {
- font-size: 300%;
- text-transform:uppercase;
- letter-spacing: .065em;
- font-weight: 5900;
-}
-
-h3 {
- font-size: 115%;
- text-transform:uppercase;
- letter-spacing: .065em;
- font-weight: 5900;
- text-align:center;
  clear:both;
 }
 
@@ -72,6 +47,25 @@ footer {
 footer a:hover {
  color:rgb(121, 210, 121);
 }
+
+h1 {
+ font-size: 300%;
+ text-transform:uppercase;
+ letter-spacing: .065em;
+ font-weight: 5900;
+}
+
+h3 {
+ font-size: 115%;
+ text-transform:uppercase;
+ letter-spacing: .065em;
+ font-weight: 5900;
+ text-align:center;
+ clear:both;
+}
+
+
+
 /*-------NAV--------*/
 
 a, a:visited, a:hover, a:active {
@@ -125,7 +119,8 @@ a, a:visited, a:hover, a:active {
 }
 
 
-/*-------SIDENAV (for about.html)---------*/
+
+/*----------SIDENAV ------------*/
 
 .sidenav {
  position:fixed;
@@ -139,6 +134,7 @@ a, a:visited, a:hover, a:active {
  height:50px;
  text-align:right;
 }
+
 .sidenav li a {
  font-size:20px;
  padding:10px;
@@ -157,7 +153,10 @@ a, a:visited, a:hover, a:active {
  text-align:center;
 }
 
+
+
 /*------ABOUT.HTML-----*/
+
 .about-wrapper {
  float:left;
  margin-right:20%;
@@ -173,6 +172,7 @@ a, a:visited, a:hover, a:active {
 }
 
 
+
 /*-------SCHEDULE.HTML-------*/
 
 .schedule-wrapper {
@@ -186,7 +186,10 @@ a, a:visited, a:hover, a:active {
  width:50%;
 }
 
-#spring, #summer, #note, #rain {
+#spring, 
+#summer, 
+#note, 
+#rain {
  margin-left:30px;
  margin-right:20px;
  margin-bottom:50px;
@@ -203,9 +206,12 @@ a, a:visited, a:hover, a:active {
  height:380px;
 }
 
-#spring a:hover, #summer a:hover {
+#spring a:hover, 
+#summer a:hover {
  color:rgb(121, 210, 121);
 }
+
+
 
 /*-------ENROLL.HTML-------*/
 
@@ -221,6 +227,20 @@ a, a:visited, a:hover, a:active {
  color:rgb(121, 210, 121);
 }
 
+
+
+/*-------RAIN.HTML-------*/
+
+.rain {
+ padding:20px;
+ border-radius:10px;
+ background:black;
+ width:75%;
+ margin:auto;
+}
+
+
+
 /*-------CONTACT.HTML-------*/
 
 .contact {
@@ -231,7 +251,8 @@ a, a:visited, a:hover, a:active {
  margin:auto;
 }
 
-.phone, .mail {
+.phone, 
+.mail {
  display:inline-block;
  min-width:20%;
  margin-top:50px;
@@ -244,6 +265,9 @@ img {
  height:100px;
 }
 
-.phone a:hover, .mail a:hover {
+.phone a:hover, 
+.mail a:hover {
  color:rgb(121, 210, 121);
 }
+
+
