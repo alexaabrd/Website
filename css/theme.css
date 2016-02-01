@@ -68,7 +68,7 @@ a:hover {
  
 /*----------NAVIGATION-------*/
 
-nav {
+.topnav {
  width: 100%;
  height: 50px;
  margin-top:-150px;
@@ -77,8 +77,8 @@ nav {
  padding-right:1%;
 }
 
-nav a {
- display:inline-block;
+.topnav a {
+ float:left;
  height:100%;
  width:23%;
  padding:10px;
@@ -91,27 +91,26 @@ nav a {
 }
 
 
-nav a:link {
+.topnav a:link {
   color: white;
   text-decoration: none;
 }
 
-nav a:visited {
+.topnav a:visited {
   color: white;
 }
 
-nav a:hover {
+.topnav a:hover {
   padding: 8px;
   border:2px solid white; 
   background:rgba(255, 148, 77, .9);
 }
 
-nav a.active {
+.topnav a.active {
   padding: 10px;
   border:2px solid transparent;
   background: rgb(255, 148, 77);
 }
-
 
 
 /*---------ABOUT.HTML--------*/
@@ -134,15 +133,15 @@ nav a.active {
 
 
 .icon li {
- display:inline-block;
- width: 150px;
- height: 150px;
- border:2px solid black;
+ float:left;
+ width: 20%;
+ height: 20%;
+ margin:2%;
 }
 
 .icon li img {
- width:90%;
- height:90%;
+ width:100%;
+ height:100%;
 } 
 
 /*--------PROJECT.HTML-----*/
@@ -153,3 +152,33 @@ nav a.active {
  height: 200px;
 }
 
+
+
+
+
+
+/*-------------MEDIA QUERIES------------------------------------*/
+@media (max-width: 800px) {
+  .row {
+    clear: left;
+  }
+ .icon li {
+  width:40%;  
+  margin:2.5%
+  }
+}
+
+@media (max-width: 640px) {
+ .topnav a { 
+  width:47%;
+  margin-bottom:10px;
+ }
+ 
+ .stack {
+  clear:left;
+ }
+ 
+ header {
+  padding-top:20px;
+ }
+}
