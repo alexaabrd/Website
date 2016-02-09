@@ -45,16 +45,15 @@ footer {
  right:0;
 }
 
-footer a, 
-footer a:visited {
+footer a, footer a:visited {
  color:white;
 }
 
 footer a:hover {
- color:yellow;
+ color: lightgreen;
 }
 
-a:hover {
+footer a:hover {
  color:rgb(0, 128, 0);
 }
 
@@ -69,9 +68,6 @@ h1 {
  text-transform:uppercase;
  letter-spacing: .065em;
  font-weight: 5900;
- text-align:center;
- color:white;
- text-shadow: 2px 1px black;
 }
 
 h3 {
@@ -109,25 +105,21 @@ h3 {
   padding-bottom:5px;
   font-size: 16px;
   font-weight: bold;
-  color: lightgray;
+  color: #004d00;
   border-bottom: 2px solid transparent;
 }
 
-.topbrand a:hover,
 .topnav  li  a:hover,
 .topnav  li  a:focus {
-  border-bottom-color: white;
-  color:white;
+  border-bottom-color: black;
+  color:black;
 }
 
-.active a,
-.active a:hover,
-.active a:focus,
 .topnav  .active  a,
-.topnav  .active  a:hover,
-.topnav  .active  a:focus {
-  color: white;
-  border-bottom-color: white;
+.active a:hover,
+.active a:focus {
+  color: black;
+  border-bottom-color: black;
 }
 
 @media (min-width: 1000px) {
@@ -211,14 +203,10 @@ h3 {
 /*------INDEX.HTML-----*/
 
 .main {
-  padding-left:30%;
- padding-right:5%;
- margin-bottom:50px;
- font-size:125%;
+ padding: 50px;
+ text-align:center;
  color:white;
- font-weight:900;
- text-shadow: 1px 1px black;
- }
+}
 
 
 
