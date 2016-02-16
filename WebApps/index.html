@@ -3,13 +3,16 @@
 
 <head>
   <meta charset=”utf-8”>
+  <script type="text/javascript" src="scripts/table.js"></script>
+  <script type="text/javascript" src="scripts/tasks.js"></script>
+<script type="text/javascript" src="scripts/hangman.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/theme.css">
   <link rel="icon" href="../images/icon.png" type="image/x-icon" />
   <link rel="shortcut icon" href="../images/icon.png" type="image/ico"/>
   <title>Alexa Bird | Home </title>
 </head>
 
-<body>
+<body onload="home()">
 
   <header class="main-header">
    <h1>Alexa Bird</h1>
@@ -18,9 +21,85 @@
   <nav class="topnav">
      <a href="../index.html">Home</a
     ><a href="../about.html">About Me</a
-    ><a class="active stack" href="webapps.html">WebApps</a
+    ><a class="active stack" href="#">WebApps</a
     ><a  href="../projects.html">Projects</a>
   </nav>
+
+    <nav>
+    <ul class="sidenav">
+     <li><a href="#" onclick="task3()">Task 3</a></li>
+     <li><a href="#" onclick="task4()">Task 4</a></li>
+    </ul>
+   </nav>
+
+
+<div class="content">
+
+  <div class ="container" id="task3">
+
+
+  <label class="label">Filter by Team: </label>
+  <select id="teamFilter" onchange="printTable()">
+  <option value="0">All</option>
+  <option value="spurs">Spurs</option>
+  <option value="suns">Suns</option>
+  </select><br>
+
+  <label>Filter by GP: </label>
+  <select id="GPFilter" onchange="printTable()">
+  <option value="0">All</option>
+  <option value="1"> <75</option>
+  <option value=" 7"> >75</option>
+  </select><br>
+
+
+  <label>Filter by PS:</label>
+  <select id="PSFilter" onchange="printTable()">
+  <option value="0">All</option>
+  <option value="C">C</option>
+  <option value="PF">PF</option>
+  <option value="PG">PG</option>
+  <option value="SF">SF</option>
+  <option value="SG">SG</option>
+  </select>
+<br>
+
+ <table id="table" style="width:100%" >
+   <br><thead>
+     <tr>
+	<th></th>
+	<th>Player Name<br>
+	<button type="button" onclick="sortByName()">Sort by Name</button></th>
+	<th>Team Name<br>
+	<button type="button" onclick="sortByTeam()">Sort by Team</button></th> 	<th>PS<br>
+	<button type="button" onclick="sortByPS()">Sort by PS</button></th>
+	<th>GP<br>
+	<button type="button" onclick="sortByGP()">Sort by GP</button></th>
+     </tr>
+    </thead>
+    <tbody id="stats">
+    </tbody>
+ </table>
+</div>   <!--task3-->
+
+<div class="container" id="task4">
+
+<button type="button" onClick="beginGame(0)">Level 1</button>
+<button type="button" onClick="beginGame(1)">Level 2</button>
+<button type="button" onClick="beginGame(2)">Level 3</button>
+<button type="button" onClick="beginGame(3)">Level 4</button>
+
+ <canvas id="canvas"  width="800" height="400">
+  </canvas>
+</div>
+
+
+
+
+</div>
+
+
+
 
 </body>
 
