@@ -182,12 +182,6 @@ a:hover {
  height: 200px;
 }
 
-
-.project { 
-display:inline-block;
-float:left; 
-font-size:20px;
-}
 /*-----------------WEBAPPS--------------*/
 
 .container {
@@ -202,28 +196,20 @@ padding-left:100px;
 }
 
 .login-label {
- text-transform:uppercase;
- font-size:1.5em;
- color:white;
- font-weight:bold;
- width:100%;
- text-align:center;
  display:inline-block;
+ padding-left:30px;
 }
 
-.input {
+input {
  display:inline-block;
-  width:50%;
+ margin-left:30px;
  border-radius:5px;
  border: 5px solid white; 
- background:rgba(255, 255, 255, .25);
- box-shadow: 
-      inset 2px 2px 8px  rgba(0,0,0,0.4),
-            4px 4px 16px rgba(0,0,0,0.4); 
- padding: 15px;
- font-size:1.2em;
- text-align:center;
- margin: 0 25% 10px 25%;
+ background:rgba(255, 255, 255,.5);
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
 }
 
 select {
@@ -236,70 +222,17 @@ canvas {
 }
 
 button {
- display:inline-block;
- width:100px;
+display:inline-block;
+width:100px;
 }
 
 form {
- width:500px;
- margin:50px auto 50px auto;
- background:rgba(0, 153, 153, .5);
- padding:20px;
- border-radius:20px;
- box-shadow:     5px  5px 30px rgba(20, 50, 50, .3),
-		-5px -5px 30px rgba(20, 50, 50, .3),
-		-5px  5px 30px rgba(20, 50, 50, .3),
-	 	 5px -5px 30px rgba(20, 50, 50, .3);
-    padding: 20px;
-
+width:25%;
+margin:auto;
+background:rgba(120, 0, 120, .5);
+padding:20px;
+border-radius:20px;
 }
-.taskman {
- background:rgba(50, 200, 200, .25);
-}
-
-.taskman h1 {
-color:darkGray;
- position:fixed;
- left:-250px;
- top:225;
- transform:rotate(-90deg);
-}
-.task { width:90%;}
-.completed {
- border: 0;
- display: block;
- width:30px;
- height:30px;
- background: url('../images/check.png');
- background-size: cover;
- color:transparent;
-}
-
-.uncompleted { 
- border: 0;
- display: block;
- width:30px;
- height:30px;
- background: url('../images/uncheck.png');
- background-size: cover;
- color:transparent;
-
-}
-.trash {
- border: 0;
- display: block;
- width:25px;
- height:25px;
- background: url('../images/trash.png');
- background-size: cover;
- color:transparent;
-
-}
-
-#logout { 
- display:inline-block;
-float:right; }
-
 
 /*-------------MEDIA QUERIES------------------------------------*/
 @media (max-width: 800px) {

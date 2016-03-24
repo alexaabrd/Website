@@ -5,7 +5,8 @@
   <meta charset=”utf-8”>
   <script type="text/javascript" src="scripts/table.js"></script>
   <script type="text/javascript" src="scripts/tasks.js"></script>
-<script type="text/javascript" src="scripts/hangman.js"></script>
+  <script type="text/javascript" src="scripts/hangman.js"></script>
+  <script type="text/javascript" src="scripts/taskManager.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/theme.css">
   <link rel="icon" href="../images/icon.png" type="image/x-icon" />
   <link rel="shortcut icon" href="../images/icon.png" type="image/ico"/>
@@ -29,6 +30,8 @@
     <ul class="sidenav">
      <li><a href="#" onclick="task3()">Task 3</a></li>
      <li><a href="#" onclick="task4()">Task 4</a></li>
+     <li><a href="php/login.php" target="_blank" onclick="task5()">Task 5</a></li>
+     <li><a href="#" onclick="task6()">Task 6</a></li>
     </ul>
    </nav>
 
@@ -38,35 +41,36 @@
   <div class ="container" id="task3">
 
 
-  <label class="label">Filter by Team: </label>
-  <select id="teamFilter" onchange="printTable()">
-  <option value="0">All</option>
-  <option value="spurs">Spurs</option>
-  <option value="suns">Suns</option>
-  </select><br>
+    <label class="table-label">Filter by Team: </label>
+    <select id="teamFilter" onchange="printTable()">
+     <option value="0">All</option>
+     <option value="spurs">Spurs</option>
+     <option value="suns">Suns</option>
+    </select><br>
 
-  <label>Filter by GP: </label>
-  <select id="GPFilter" onchange="printTable()">
-  <option value="0">All</option>
-  <option value="1"> <75</option>
-  <option value=" 7"> >75</option>
-  </select><br>
+    <label class="table-label">Filter by GP: </label>
+    <select id="GPFilter" onchange="printTable()">
+     <option value="0">All</option>
+     <option value="1"> <75</option>
+     <option value=" 7"> >75</option>
+    </select><br>
 
 
-  <label>Filter by PS:</label>
-  <select id="PSFilter" onchange="printTable()">
-  <option value="0">All</option>
-  <option value="C">C</option>
-  <option value="PF">PF</option>
-  <option value="PG">PG</option>
-  <option value="SF">SF</option>
-  <option value="SG">SG</option>
-  </select>
-<br>
+    <label class="table-label">Filter by PS:</label>
+    <select id="PSFilter" onchange="printTable()">
+     <option value="0">All</option>
+     <option value="C">C</option>
+     <option value="PF">PF</option>
+     <option value="PG">PG</option>
+     <option value="SF">SF</option>
+     <option value="SG">SG</option>
+    </select>
+    
+    <br>
 
- <table id="table" style="width:100%" >
-   <br><thead>
-     <tr>
+    <table id="table" style="width:100%" >
+      <br><thead>
+      <tr>
 	<th></th>
 	<th>Player Name<br>
 	<button type="button" onclick="sortByName()">Sort by Name</button></th>
@@ -75,28 +79,50 @@
 	<button type="button" onclick="sortByPS()">Sort by PS</button></th>
 	<th>GP<br>
 	<button type="button" onclick="sortByGP()">Sort by GP</button></th>
-     </tr>
-    </thead>
-    <tbody id="stats">
-    </tbody>
- </table>
-</div>   <!--task3-->
+      </tr>
+      </thead>
+      <tbody id="stats">
+      </tbody>
+    </table>
 
-<div class="container" id="task4">
-
-<button type="button" onClick="beginGame(0)">Level 1</button>
-<button type="button" onClick="beginGame(1)">Level 2</button>
-<button type="button" onClick="beginGame(2)">Level 3</button>
-<button type="button" onClick="beginGame(3)">Level 4</button>
-
- <canvas id="canvas"  width="800" height="400">
-  </canvas>
-</div>
+  </div>   <!--task3-->
 
 
+  <div class="container" id="task4">
+
+    <button type="button" onClick="beginGame(0)">Level 1</button>
+    <button type="button" onClick="beginGame(1)">Level 2</button>
+    <button type="button" onClick="beginGame(2)">Level 3</button>
+    <button type="button" onClick="beginGame(3)">Level 4</button>
+ 
+    <canvas id="canvas"  width="800" height="400">
+    </canvas>
+
+  </div>
 
 
-</div>
+  <div class="container" id="task5">
+	Task 5, the PHP Task Manager site, opened in a new tab.
+  </div>
+
+
+
+  <div class="container" id="task6">
+
+    <form autocomplete="off"  method="post">
+      <label class="login-label">Username:</label>
+      <br>
+      <input class="input" type="text" name="username">
+      <br><br>
+      <label class="login-label">Password:</label>
+      <br>
+      <input class="input" type="password" name="password">
+	<label id="error"></label>
+        <center><input type="button" onclick="login()" name="function" value="login"></center>
+    </form>
+  </div>
+
+</div> <!--content-->
 
 
 
@@ -104,7 +130,4 @@
 </body>
 
 </html>
-
-
-
 
